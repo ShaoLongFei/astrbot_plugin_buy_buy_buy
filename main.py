@@ -55,7 +55,7 @@ class BuyBuyBuy(Star):
     @filter.command("add_keyword")
     async def add_keyword(self, event: AstrMessageEvent):
         if not self.register_session_map.keys().__contains__(event.unified_msg_origin):
-            event.plain_result("当前用户还未注册")
+            yield event.plain_result("当前用户还未注册")
             return
 
         list_keyword = event.get_message_str().split(" ")
@@ -71,7 +71,7 @@ class BuyBuyBuy(Star):
     @filter.command("delete_keyword")
     async def add_keyword(self, event: AstrMessageEvent):
         if not self.register_session_map.keys().__contains__(event.unified_msg_origin):
-            event.plain_result("当前用户还未注册")
+            yield event.plain_result("当前用户还未注册")
             return
 
         list_keyword = event.get_message_str().split(" ")
@@ -87,7 +87,7 @@ class BuyBuyBuy(Star):
     @filter.command("list_keywords")
     async def list_keywords(self, event: AstrMessageEvent):
         if not self.register_session_map.keys().__contains__(event.unified_msg_origin):
-            event.plain_result("当前用户还未注册")
+            yield event.plain_result("当前用户还未注册")
             return
         yield event.plain_result(f"当前的关键词列表 {self.register_session_map[event.unified_msg_origin]}")
 

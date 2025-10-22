@@ -1,9 +1,5 @@
-# helloworld
+# 买买买
 
-AstrBot 插件模板
+AstrBot 购物监控插件
 
-A template plugin for AstrBot plugin feature
-
-# 支持
-
-[帮助文档](https://astrbot.app)
+从群聊里过滤指定的关键词，转发给指定的人
